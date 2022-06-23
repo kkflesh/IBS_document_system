@@ -5,4 +5,4 @@ from wtforms import SubmitField
 
 class UpdateISO(FlaskForm):
     file = FileField()
-    submit = SubmitField('Upload')
+    submit = SubmitField('Update')
