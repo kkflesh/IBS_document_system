@@ -2,6 +2,7 @@
 {% extends "layout.html" %}
 
 {%block content%}
+
 <div>
 <form method="POST" action="">
       <div class="mb-3">
@@ -14,19 +15,47 @@
             <span class="input-group-text" id="inputGroupFileAddon01" style="width:120px">Procedure</span>
                 <div class="custom-file">
                 <input type="file" class="custom-file-input" id="File01">
-                <label class="custom-file-label" for="File01" data-browse="">Choose File</label>
+                <label class="custom-file-label" for="File01" data-browse="">Click to Choose File</label>
                 </div>
             </div>
         </div>
 
-      <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon2" style="width:120px">Department</span>
-          <input type="text" class="form-control" placeholder="Username" aria-label=""
-                 aria-describedby="basic-addon1">
-      </div>
+<div class="input-group mb-3">
+<span class="input-group-text"  style="width:120px">Department</span>
+<div class="dropdown mr-4">
+  <select class="custom-select" aria-label=".form-select-lg example">
+
+        <option>Art&Plate</option>
+        <option>Material Control</option>
+        <option>Plant Office</option>
+        <option>QA/QC</option>
+        <option>Reclaim</option>
+        <option>Safety</option>
+        <option>Scheduling</option>
+        <option>Shipping</option>
+        <option>T-Shirt Conv.</option>
+        <option>T-Shirt Ext.</option>
+        <option>TCL-COEX</option>
+        <option>TCL-CTCL</option>
+        <option>TCL-ITCL</option>
+        <option>Technical</option>
+ </select>
+
+</div>
+<span class="input-group-text ml-5" id="basic-addon2" style="width:120px">Doc. Level</span>
+<div class="dropdown">
+  <select class="custom-select" aria-label="Default select example">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+
+ </select>
+</div>
+</div>
             <div class="input-group mb-3">
               <span class="input-group-text" id="version" style="width:120px">Doc. Version</span>
-                <input type="text" class="form-control" placeholder="Recipient's username"
+                <input type="text" class="form-control" placeholder="1.0"
                      aria-label="Recipient's username" aria-describedby="basic-addon2">
             </div>
             <div class="input-group mb-3">
@@ -40,16 +69,19 @@
         </div>
         <div>
           <form action="/action_page.php">
-              <label for="birthday">Effective Date:</label>
-              <input type="date" id="Effective_Date" name="Effective_Date">
+              <label >Effective Date:</label>
+              <input  type="date" id="Effective_Date" name="Effective_Date">
           </form>
         </div>
+
       </fieldset>
       <div class="form-group">
         {{ form.submit(class="btn btn-outline-info") }}
       </div>
     </form>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 {% endblock content %}
